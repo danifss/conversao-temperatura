@@ -27,7 +27,7 @@ jobs:
           push: true
           tags: |
             danifss/conversao-temperatura:latest
-            danifss/conversao-temperatura:${{ github.run_number }}
+            danifss/conversao-temperatura:v${{ github.run_number }}
 
   CD:
     needs: [CI]
