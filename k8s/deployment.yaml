@@ -13,10 +13,10 @@ spec:
         app: conversao-temperatura
     spec:
       containers:
-      - name: conversao-temperatura
-        image: danifss/conversao-temperatura:latest
-        ports:
-        - containerPort: 8080
+        - name: conversao-temperatura
+          image: danifss/conversao-temperatura:latest
+          ports:
+            - containerPort: 8080
 ---
 # Service
 apiVersion: v1
@@ -27,6 +27,6 @@ spec:
   selector:
     app: conversao-temperatura
   ports:
-  - port: 80
-    targetPort: 8080
-  type: LoadBalancer
+    - port: 80
+      targetPort: 8080
+  type: ClusterIP
